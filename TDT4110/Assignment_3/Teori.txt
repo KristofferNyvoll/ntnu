@@ -1,0 +1,36 @@
+Teori - Datamaskiner
+
+a) Skriv de 5 stegene i “Fetch/Execute Cycle” i riktig rekkefølge.
+
+1:Instruction Fetch(IF)
+2:Instruction Decode(ID)
+3:Data Fetch(DF)
+4:Instruction Execute(IE)
+5:Result Return(RR)
+
+b) Hvilket steg i “Fetch/Execute Cycle” flytter verdiene fra Minnet til ALU?
+
+Steg 3; Data Fetch. Hentet fra "Theory Book" IT Grunnkurs S. 22: Principles of Computer Operations":
+
+"So the data Fetch step of the Fetch/Execute cycle must get the two values at memory locations x and y, 
+and after they are added, the Result Return step stores the answers in location z. "
+
+c) Hva gjør programtelleren (Program Counter)?
+Det er programtelleren som holder styr på hvilket steg i Fetch/execute-cyclen som skal gjennomføres.
+PC (program counter)Datamaskiner bestemmer dette basert på adressen til neste steg (der den er lagret).
+Denne adressen er (noe snodig) kalt programtelleren. (Burde egentlig vært "next instruction adress" imo)
+
+d) Hva er forventet klokkehastighet på en moderne datamaskin?
+"klokkehastigheten har økt dramatisk de siste årene, som har resultert i hastigheter målt i 1,000 GHz." Fra samme bok.
+Vi snakker altså om hastigheter som passer med enheten "GHz"
+
+e) Hva står SSD for?
+Solid State Drive.
+
+f) Hva er forskjellen mellom en SSD og en harddisk?
+SSD'en har ingen bevegelige deler og er langt raskere. 
+HDD'en lagrer data på spinnende magnetiske plater. 
+
+g) Hva er hovedoppgaven til ALU?
+ALU= Arithmetic/Logic Unit. Denne enheten utfører faktisk operasjonen ("matten").
+ALU'en har kretser som utfører hver eneste maskininstruksjon.

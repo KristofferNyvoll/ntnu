@@ -1,0 +1,24 @@
+1) Hva er forskjellen på primær- og sekundærlagring?
+Primærlagringen referer til hovedlagringen lokalt på maskingen, altså RAM.
+Sekundærlagring, derimot, referer til ekstern lagring, som brukes til å lagre data over lengre tid.
+-CD'er, floppy disks, USB osv.
+
+
+2) Harddisk, SSD og RAM: Nevn de ulike egenskapene med tanke på permanent/volatilt og tilfeldig/sekvensiell aksess.
+HDD: Hard Disk Drive: Dataen lagres på skiver som magnetisk remanens. Denne er ikke flyktig, dvs at dataen lagres permanent (selv om disken ikke er i drift.)
+     Tilgangen til dataen er gjort på en ikke-sekvensiell måte, som betyr at den må skanne gjennom hele disken.
+
+SSD: Solid State Drive: De fleste bruker et ikke-volatilt minne, så dataen bevares selv om maskinen er av. Dvs: permanent  lagring
+     SSD bruker både tilfeldig og sekvensiell aksess.
+
+RAM: Random Access Memory: dataen bruker et volatilt minne, dvs at du mister dataen hvis RAM'en mister strøm.
+
+3) Hvorfor brukes silisium mye i elektronikk?
+Silisium leder strøm (halvleder). Den leder ikke støm like godt som metall, men konduktiviteten kan økes ved å tilsette bor, fosfor eller arsen.
+Silisium har et lett prosseserbart oksid som er veldig vanlig i jordskorpen.
+
+4) Hva er en transistor?
+En transistor fungerer som en elektronisk bryter. Du kan skru av bryteren ved å legge til en svak strøm. Den har to tilstander: av eller på.
+
+5) 32 000 bytes * 8 = 256 000 bits.
+over 40 sekunder: 256 000 / 40 = 6 400 bits per sekund.

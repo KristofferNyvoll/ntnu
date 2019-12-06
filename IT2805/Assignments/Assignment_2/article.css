@@ -1,0 +1,57 @@
+body {
+    background-color: lightgrey;
+    color: #323232;
+    line-height: 150%;
+    text-align: justify;
+}
+
+article {
+    width: 960px;
+    margin: auto;
+    font-family: Verdana, Georgia, sans-serif;
+    font-size: 18px;
+    overflow: hidden;
+    max-width: 75ch;
+}
+
+#cover {
+    width: 100%;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 0px;
+}
+
+
+hr {
+    border-top: 1px solid black;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+p, blockquote, ul, ol {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+a:hover {
+    color: grey;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+#facts {
+    margin: 1em 1em 1em 1em;
+    width: 50%;
+    border: 1px dashed;
+    float: right;
+}
+
+#facts > ul {
+    list-style-image: url('cup-icon.svg');
+    line-height: 1.5em;
+    padding-left: 1.5em;
+    padding-right:1.2em;
+}

@@ -1,0 +1,11 @@
+Teori ITGK Øving 5:
+
+a) 1 byte = 8 bits. x bit gir 2^x verdier. 4 bytes = (2^8 * 4) = 1 024ulike verdier (nb)
+b) Hver piksel består vanligvis av 8 bits = 1 byte. 1920x1080 piksler tilsvarer 2 073 600 bytes altså litt over 2 MB.
+c) DAC = Digital to Analog Converter. Omformer digital kode til et analogt signal som kan forsterkes slik at vi kan høre det.
+d) 18 i titallssystemet = 10010 i binær. 18 i hexadecimal er 12.
+e) POP in ASCII: 080 079 080
+f) Hver piksel kan ha 255 mulige farger. Flertall av piklser kan danne bilder dersom det er nok piksler.
+ Intensiteten og fargen kan variere, og de er masse små punkter som representerer et bilde. 
+g) Digital lyd er representert som binærkode, mens analog lyd er en gjengivning av lyden (lydbølgene) som ble spilt inn. 
+Analog lyd er et faktisk opptak, mens digital lyd er den kombinasjonen av binærkode som best representerer lyden. 

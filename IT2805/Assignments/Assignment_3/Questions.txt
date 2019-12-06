@@ -1,0 +1,15 @@
+Questions
+
+1) What is the difference between position: absolute and position: fixed ?
+
+"position: absolute" positions the element according to its ancestor element (if the ancestor is positioned and not static)
+"position: fixed" positions the element relative to the browser window. 
+The difference between the two is that the "fixed" property only cares about where it is in the browser window, where the absolute 
+property places the element relative to other elements in the code.
+
+2) With CSS3, how do we access the third element within another element?
+
+We can use the :nth-child(n) - selector. If n=1, you select the first child of their parent. To select the third element in element1, the code will be the following:
+element1:nth-child(3) {
+	...
+}  

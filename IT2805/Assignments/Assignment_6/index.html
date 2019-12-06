@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tax form</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="form">
+        <form action="http://folk.ntnu.no/michaedm/norwegian-tax-administration/receive.php" method="post">
+            <fieldset>
+            <!--Legger inn overskrift og border-->
+            <legend>Superhero tax form</legend>
+            Real name: <br>
+            <input type="text" name="name" class="textbox" required pattern="[a-zA-Z]+[a-zA-Z ]+"><br><br>
+            <!--Required pattern gjør at den kun godtar bokstavene a-z (store og små) og mellomrom-->
+            What is your gender? <br>
+            <input type="radio" name="gender" value="male" > Male<br>
+            <input type="radio" name="gender" value="female"> Female<br><br>
+            Email:<br>
+            <input type="email" placeholder="example@email.com" name="email" class="textbox" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br><br>
+            <!--[a-z]{2,3}$ gjør at den bare godtar godkjent domenenavn (.ntnu eller @hotmail osv) og at det som etterfølger det siste punktumet skal være minst to, maks tre bokstaver.-->
+            Birthdate:<br>
+            <input type="date" name="birthdate" max="1987-12-31" required><br><br>
+            Hero name: <br>
+            <input type="text" name="hero name" class="textbox" required><br><br>
+            Do you wear spandex?<br> 
+            <input type="radio" name="spandex" value="yes"> Yes
+            <input type="radio" name="spandex" value="no"> No <br><br>
+            <p class="tekst">Choose your strength:</p>
+            <select name="strength" id="strength" required>
+                <option value="" disabled selected>Choose strength</option>
+                <!--Valget over er bare en placeholder, som ikke er mulig å velge.-->
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <p class="tekst">Choose your speed:</p>
+            <select name="speed" id="speed" required>
+                <option value="" disabled selected>Choose speed</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+
+            <p class="tekst">Choose your intelligence:</p>
+            <select name="intelligence" id="intelligence" required>
+                <option value="" disabled selected>Choose intelligence</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select> <br> <br>
+
+            Enter your annual income: <br>
+            <input type="number" name="income" required id="income" min="0" oninput="beregnTax()"> <br>
+            <!--oninputkaller opp funksjonen beregnTax() som er definert i js-filen.-->
+
+            Enter your wealth: <br>
+            <input type="number" name="wealth" required id="wealth" min="0" oninput="beregnTax()"> <br>
+
+            Tax: <br>
+            <input type="number" name="tax" required id="tax" readonly> <br>
+
+            <input type="submit" name="submit" id="submit" value="Submit tax form">
+            <!-- Dette er knappen^-->
+        </fieldset>
+        </form>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

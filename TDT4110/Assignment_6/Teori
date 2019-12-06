@@ -1,0 +1,25 @@
+a) I hvilket lag i TCP/IP referansemodellen finner man HTTP, SMTP, og FTP?
+TCP/IP funksjonalitet er fordelt over 4 lag. HTTP(HyperText Transfer Protocol), SMTP(Simple Mail Transfer Protocol) og
+FTP(File Transfer Protocol) er i "the application layer", eller på norsk: "Applikasjonslaget".
+Her håndteres filoverføring, terminaloppkobling og e-post.
+
+b) Hvordan fungerer paritet som feildeteksjonsmetode?
+Den kan detektere om en byte er "feil". I en byte blir den ene bit'en på enden en 'paritetsbit'.
+Summen av alle tallene i byten skal bli et partall; hvis ikke er byten feil. (finnes også oddetallsparitet)
+
+c) Hva er forskjellen på "circuit switching" og "packet switching"?
+circuit switching bruker en fysisk kobling mellom kilden og resultatadressen, noe som bruker en del av båndbredden.
+Dette gjør ikke packet switching, som deler båndbredden. Mer effektivt, siden packets blir overført uavhengig av hverandre.
+
+d) Hva er oppgaven til rutere (Routers) i nettverk?
+Ruteren videresender nettverkspakker til riktig mottaker. Den har en tabell over nettverk, sokm sjekkes med mottakeradressen før pakken sendes.
+
+e) Hva er en protokoll i nettverkssammenheng?
+Et sett med regler som bestemmer kommunikasjon, datoverføring og tilkobling mellom sender og mottaker (og mulige feilinduserte gjenopprettingsmeotder)
+
+f)  Hvilke fem (protokoll)-lag brukes ofte for å forklare de forskjellige funksjonene til internettet?
+• Application
+• Transport
+• Internet
+• Data link
+• Physical

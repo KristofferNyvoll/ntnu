@@ -1,0 +1,17 @@
+.wrapper{
+    position: absolute;
+    min-height: 100%;
+}  
+
+footer {
+    position: absolute;
+    bottom:0px;
+}
+
+ul {
+    list-style: square;
+}
+
+li li:last-child{
+    color: green;
+}

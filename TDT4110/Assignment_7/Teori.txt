@@ -1,0 +1,23 @@
+a) Hva er et intranett?
+Et internt nettverk for en bedrift/organisasjon. Tilgang er eksklusivt for enkelte personer. 
+Det er ikke en del av det åpne internettet.
+
+b) Hva er forskjellen på en ruter og en vert (host)?
+En ruter er en enhet som mottar og videresender (redirects) pakker med data. Den har en adresseliste som definerer hvor dataen skal sendes. 
+En vert er enheten som er tilkoblet nettverket.
+
+c) Hva er 129.241.103.4 et eksempel på i nettverkssammenheng?
+En IP adresse
+
+d) Hva er en IP-adresse?
+En personlig ID som brukes for enheter som er tilkoblet internett. F. eks: 129.241.103.4
+
+e) Hva er forskjellen på IPv4 og IPv6?
+IPv4 benytter seg av 32-bits adresser, noe som gir >5 * 10^9 unike adresser. (4 294 967 296)
+IPv6 benytter seg av 128-bits adresser, aka 340 282 366 920 938 463 463 374 607 431 768 211 456 unike adresser. 
+
+f) Hvorfor har vi behov for IPv6?
+Det ble noe knapt med IPv4, noen adresser var reservert fra før. Det var behov for flere adresser
+
+g) Hva står forkortelsen ISP for i nettverkskommunikasjon?
+Internet Service Provider (Nettverksleverandør). Eks: Telenor,Get og Nextgentel. 

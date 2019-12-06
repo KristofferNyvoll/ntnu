@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(232, 235, 237);
+    text-align: justify;
+    margin: auto;
+    max-width: 800px;
+}
+h1 {
+    color: blue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 350%;
+    text-align: center;
+}
+h2 {
+    color: blue;
+}
+p {
+    color: rgb(8, 61, 96);
+    line-height: 1.4;
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ol {
+    color: rgb(10,60,100);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer { 
+    text-align: center;
+}
+img {
+    float: right;
+    border-radius: 50%;
+    border-style: solid;
+    margin-left: 25px;
+    max-width: 150px;
+    margin-bottom: 50px;
+    
+}
+.biography {
+    border-style: solid;
+    border-color: darkgrey;
+    padding: 1em;
+    max-width: 800px;
+
+}
+.questiones {
+    border-style: solid;
+    border-color: darkblue;
+    padding: 1em;
+}
