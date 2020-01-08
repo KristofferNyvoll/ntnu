@@ -37,7 +37,7 @@
 
 ### Tips
 
-Ikke gidd å møte i forelesninger med mindre du vil ha ting inn med teskje (og/eller liker å møte i forelesning generelt). *Mer effektivt å koke øvinger og øve uka før eksamen.*
+Ikke gidd å møte i forelesninger med mindre du vil ha ting inn med teskje (og/eller liker å møte i forelesning generelt). *Mer effektivt å koke øvinger og øve ukene før eksamen.*
 
 Hvis Tufte er foreleser, burde det gå fint å koke samtlige øvinger. De er ikke (historisk sett) eksamensrelevante eller givende i det hele tatt. Odd-Rune er noe mer opptatt av man ikke skal koke, så da bør du etterstrebe å gjøre øvingene selv eller redigere ganske store deler av koden. 
 
@@ -454,7 +454,7 @@ Mer detaljer for de som vil fordype seg, men ikke direkte eksamensstoff
 
 ## Sekvensiell logikk (kompendium på BlackBoard) 
 
-[Tok selv sjansen på å ikke lese denne]
+[Tok selv sjansen på å ikke lese denne. Det gikk helt fint.]
 
 
 
@@ -462,7 +462,7 @@ Mer detaljer for de som vil fordype seg, men ikke direkte eksamensstoff
 
 Denne handler bare om hvordan utviklingen til prosessorer kan være/har vært og vil bli. 
 
-Hvis du vil vite litt om hva som forhindrer prosessorer i å bli enda bedre (tempratur, antall transistorer, pris og markedsføring), så er denne grei å lese. Tar 5 min. 
+Hvis du vil vite litt om hva som forhindrer prosessorer i å bli enda bedre (temperatur, antall transistorer, pris og markedsføring), så er denne grei å lese. Tar 5 min. 
 
 Denne var pensum H2019. 
 
