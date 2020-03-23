@@ -2,7 +2,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-
+import java.util.ArrayList;
 
 public class SushiBar {
     // SushiBar settings.
@@ -33,7 +33,36 @@ public class SushiBar {
         servedOrders = new SynchronizedInteger(0);
         takeawayOrders = new SynchronizedInteger(0);
 
-        // TODO: initialize the bar and start the different threads.
+        WaitingArea waitingArea = new WaitingArea(waitingAreaCapacity);
+        Door door = new Door(waitingArea);
+
+        ArrayList<Thread> consumerThreads = new ArrayList<>();
+        for (int i = 0; waitressCount > i; i++){
+            consumerThreads.add(new Thread(new Waitress(waitingArea)));
+        }
+
+        Thread producerThread = new Thread(door);
+        new Clock(duration);
+        producerThread.start();
+        consumerThreads.forEach((c) -> c.start());
+
+        for (int i = 0; i < waitressCount; i++){
+            try{
+                consumerThreads.get(i).join();
+            } catch (InterruptedException e){
+                e.printStackTrace();
+            }
+        }
+
+        try {
+            producerThread.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        SushiBar.write("Total number of orders: " + totalOrders.get());
+        SushiBar.write("Total number of takeaway: " + takeawayOrders.get());
+        SushiBar.write("Total number of orders eaten at the bar: " + servedOrders.get());
     }
 
     // Writes actions in the log file and console.
@@ -45,7 +74,6 @@ public class SushiBar {
             bw.close();
             System.out.println(Clock.getTime() + ", " + str);
         } catch (IOException e) {
-            // TODO: Auto-generated catch block.
             e.printStackTrace();
         }
     }

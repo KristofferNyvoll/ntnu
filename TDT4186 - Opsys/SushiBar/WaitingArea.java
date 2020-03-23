@@ -1,7 +1,13 @@
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 /**
  * This class implements a waiting area used as the bounded buffer, in the producer/consumer problem.
  */
 public class WaitingArea {
+    // We have a FIFO (First in- first out), so we implement a queue
+    private Queue<Customer> customers;
+    private int wAreaSize;
 
     /**
      * Creates a new waiting area.
@@ -9,7 +15,8 @@ public class WaitingArea {
      * @param size The maximum number of Customers that can be waiting.
      */
     public WaitingArea(int size) {
-        // TODO Implement required functionality
+        this.wAreaSize = size;
+        customers = new ArrayDeque<>();
     }
 
     /**
@@ -18,15 +25,21 @@ public class WaitingArea {
      * @param customer A customer created by Door, trying to enter the waiting area
      */
     public synchronized void enter(Customer customer) {
-        // TODO Implement required functionality
+        customers.add(customer);
+        notifyAll();
     }
 
     /**
      * @return The customer that is first in line.
      */
     public synchronized Customer next() {
-        // TODO: Implement required functionality
+        // .poll() also removes the customer first in line from the queue
+        Customer customer = customers.poll();
+        notifyAll();
+        return customer;
     }
 
-    // Add more methods as you see fit
+    public boolean isFull() { return customers.size() >= wAreaSize;}
+
+    public boolean isEmpty() { return customers.size() == 0;}
 }

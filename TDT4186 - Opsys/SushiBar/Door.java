@@ -4,14 +4,13 @@
  * producer/consumer problem
  */
 public class Door implements Runnable {
+    private WaitingArea waitingArea;
 
     /**
      * Creates a new Door. Make sure to save the
      * @param waitingArea   The customer queue waiting for a seat
      */
-    public Door(WaitingArea waitingArea) {
-        // TODO: Implement required functionality.
-    }
+    public Door(WaitingArea waitingArea) {this.waitingArea = waitingArea;}
 
     /**
      * This method will run when the door thread is created (and started).
@@ -19,8 +18,31 @@ public class Door implements Runnable {
      */
     @Override
     public void run() {
-        // TODO: Implement required functionality.
-    }
+        while (SushiBar.isOpen){
+            try {
+                Thread.sleep(SushiBar.doorWait);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-    // Add more methods as you see fit
+            // Essence of the producer/consumer model: Producer has to wait if the shared resource is full
+            if (waitingArea.isFull()) {
+                while (waitingArea.isFull()) {
+                    try {
+                        synchronized(waitingArea) {
+                            waitingArea.wait();
+                        }
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+            else {
+                Customer customer = new Customer();
+                waitingArea.enter(customer);
+                SushiBar.write(Thread.currentThread().getName() + ": Customer " + customer.getCustomerID() + " is now created");
+            }   
+        }
+        SushiBar.write(Thread.currentThread().getName() + ": ***** DOOR CLOSED *****");
+    }
 }

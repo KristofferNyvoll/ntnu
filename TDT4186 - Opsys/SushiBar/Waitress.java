@@ -3,15 +3,15 @@
  * One waitress instance corresponds to one consumer.
  */
 public class Waitress implements Runnable {
+    private WaitingArea waitingArea;
+    private Customer customer;
 
     /**
      * Creates a new waitress. Make sure to save the parameter in the class
      *
      * @param waitingArea The waiting area for customers
      */
-    Waitress(WaitingArea waitingArea) {
-        // TODO: Implement required functionality.
-    }
+    Waitress(WaitingArea waitingArea) {this.waitingArea = waitingArea;}
 
     /**
      * This is the code that will run when a new thread is
@@ -19,9 +19,31 @@ public class Waitress implements Runnable {
      */
     @Override
     public void run() {
-        // TODO: Implement required functionality.
+        while (!waitingArea.isEmpty() || SushiBar.isOpen) {
+            customer = waitingArea.next();
+            if (customer == null) { continue;}
+
+            SushiBar.write(Thread.currentThread().getName() + " Customer " + customer.getCustomerID() + " is now fetched");
+            try {
+                Thread.sleep(SushiBar.waitressWait);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+            customer.order();
+            customer = null;
+            // The waitress can now fetch another customer
+            
+            // If the waitresses currently have nothing to do; wait
+            while(waitingArea.isEmpty() && SushiBar.isOpen) {
+                try {
+                    synchronized(waitingArea){
+                        waitingArea.wait();
+                    }
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            } 
+        }
     }
-
-
 }
-
