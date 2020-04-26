@@ -1,0 +1,102 @@
+DROP DATABASE IF EXISTS imdb;
+CREATE DATABASE imdb;
+USE imdb;
+
+CREATE Table person (
+    personid INT NOT NULL PRIMARY KEY,
+    navn VARCHAR(50),
+    fødselsdato DATE,
+    nasjonalitet VARCHAR(50)
+);
+
+CREATE TABLE lydspor (
+    lydsporid INT NOT NULL PRIMARY KEY,
+    albumnavn VARCHAR(50)
+);
+
+CREATE TABLE musikkereilydspor (
+    personid INT,
+    lydsporid INT,
+    rolle VARCHAR(50),
+    FOREIGN KEY (personid) REFERENCES person(personid) ON DELETE CASCADE,
+    FOREIGN KEY (lydsporid) REFERENCES lydspor(lydsporid) ON DELETE CASCADE
+);
+
+CREATE TABLE selskaper (
+    selskapsid INT NOT NULL PRIMARY KEY,
+    url VARCHAR(50),
+    adresse VARCHAR(50),
+    land VARCHAR(50)
+);
+
+CREATE TABLE sjanger (
+    sjangerid INT NOT NULL PRIMARY KEY,
+    navn VARCHAR(50)
+);
+
+CREATE TABLE film (
+    filmid INT NOT NULL PRIMARY KEY,
+    tittel VARCHAR(50),
+    utgivelseår INT,
+    lanseringsdato DATE,
+    storyline VARCHAR(5000),
+    lengde TIME,
+    lagetfor VARCHAR(50),
+    lydsporid INT,
+    FOREIGN KEY (lydsporid) REFERENCES lydspor(lydsporid) ON DELETE CASCADE
+     
+);
+
+CREATE TABLE sjangerifilm (
+    sjangerid INT,
+    filmid INT,
+	FOREIGN KEY (sjangerid) REFERENCES sjanger(sjangerid) ON DELETE CASCADE,
+	FOREIGN KEY (filmid) REFERENCES film(filmid) ON DELETE CASCADE
+);
+
+CREATE TABLE manusforfatterforfilm (
+    personid INT,
+    filmid INT,
+    FOREIGN KEY (personid) REFERENCES person(personid) ON DELETE CASCADE,
+    FOREIGN KEY (filmid) REFERENCES film(filmid) ON DELETE CASCADE
+);
+
+CREATE TABLE regissørforfilm (
+    personid INT,
+    filmid INT,
+    FOREIGN KEY (personid) REFERENCES person(personid) ON DELETE CASCADE,
+    FOREIGN KEY (filmid) REFERENCES film(filmid) ON DELETE CASCADE
+);
+    
+CREATE TABLE skuespillerforfilm (
+    personid INT,
+    filmid INT,
+    rolle VARCHAR(50),
+    FOREIGN KEY (personid) REFERENCES person(personid) ON DELETE CASCADE,
+    FOREIGN KEY (filmid) REFERENCES film(filmid) ON DELETE CASCADE
+);
+
+CREATE TABLE serie (
+    serieid INT NOT NULL PRIMARY KEY,
+    navn VARCHAR(50)
+);
+
+CREATE TABLE filmiserie (
+    serieid INT,
+    filmid INT,
+    sesong INT,
+    episode INT
+);
+
+CREATE TABLE bruker (
+    brukerid INT NOT NULL PRIMARY KEY
+);
+
+CREATE TABLE filmanmeldelse (
+    rating INT,
+    tekst VARCHAR(1000),
+    anmeldelsefor INT,
+    FOREIGN KEY (anmeldelsefor) REFERENCES film(filmid) ON DELETE CASCADE,
+    skrevetav INT,
+    FOREIGN KEY (skrevetav) REFERENCES bruker(brukerid) ON DELETE CASCADE
+);
