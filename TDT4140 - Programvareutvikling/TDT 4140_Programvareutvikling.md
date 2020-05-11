@@ -4,6 +4,7 @@
 
 ### Pensum
 
+<<<<<<< HEAD
 ![image-20191216181738982](/home/kristoffer/.config/Typora/typora-user-images/image-20191216181738982.png)
 
 
@@ -23,6 +24,10 @@
 Les denne ila juleferien: 
 
 ![image-20191216181718330](/home/kristoffer/.config/Typora/typora-user-images/image-20191216181718330.png)
+=======
+- Kniberg - Scrum and XP from the Trenches
+- Sommerville
+>>>>>>> 4ff2cd545ab8c8fb1a67b2fd3d92b8b5b6560530
 
 ## Product Backlogs
 
@@ -41,8 +46,6 @@ Enhver brukerhistorie kan ha følgende felt:
 I vår sammenheng er det tilstrekkelig å ha dette på gitlab, men kan også være en ide å ha det på en delt google drive/trello med kunden. 
 
 
-
-![image-20191219135402672](/home/kristoffer/.config/Typora/typora-user-images/image-20191219135402672.png)
 
 For å vurdere hvor lang tid noe kommer til å ta kan man skrive ned tall i en forhåndsdefinert intervall og *reveale* dem samtidig, og deretter diskutere seg frem til et svar. Dekomponer brukerhistoriene ned til oppgaver, og se hvor krevende de er å implementere. 
 
