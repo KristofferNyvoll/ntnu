@@ -43,11 +43,85 @@ Generell kompetanse:
 
 
 
+## Pensumliste
+
+![image-20200127120618335](/home/kristoffer/.config/Typora/typora-user-images/image-20200127120618335.png)
+
+
+
 ## Forelesninger
+
+![image-20200127121216069](/home/kristoffer/.config/Typora/typora-user-images/image-20200127121216069.png)
+
+
 
 ### F01: Intro
 
 
+
+
+
+### F05: Relasjonmodellen, oversetting fra ER
+
+
+
+![image-20200123113259207](/home/kristoffer/.config/Typora/typora-user-images/image-20200123113259207.png)
+
+**Standard relasjondatabaser**: Atomiske verdier i tabellene. Flate, 2-dimensjonale tabeller. 
+
+Kan ikke ha 2 like rader, tillater derfor ikke NULL-verdier i primærnøkkel. 
+
+
+
+![image-20200123113630109](/home/kristoffer/.config/Typora/typora-user-images/image-20200123113630109.png)
+
+
+
+
+
+
+
+![image-20200123113944277](/home/kristoffer/.config/Typora/typora-user-images/image-20200123113944277.png)
+
+
+
+**Foto**: 
+
+| ID   | Tittel | Dato |
+| ---- | ------ | ---- |
+| derp |        |      |
+
+
+
+
+
+**Fotograf**
+
+| ID   | Navn | Nasjonalitet |
+| ---- | ---- | ------------ |
+| ..   |      |              |
+
+
+
+**Motiv**
+
+| ID   | Beskrivelse |
+| ---- | ----------- |
+|      |             |
+
+
+
+**BildeTema** (FK = Foreign Key)
+
+| Foto-ID (FK mot foto) | Motiv-ID (FK mot motiv) |
+| --------------------- | ----------------------- |
+|                       |                         |
+
+- Foto-ID + Motiv-ID er primærnøkkel
+
+
+
+**Forstå hva fremmednøkler er!!**
 
 ## Wikipendium
 

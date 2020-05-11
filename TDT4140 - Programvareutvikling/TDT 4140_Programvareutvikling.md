@@ -6,6 +6,20 @@
 
 ![image-20191216181738982](/home/kristoffer/.config/Typora/typora-user-images/image-20191216181738982.png)
 
+
+
+**Kap 1+2:** Gard (59 sider)
+
+**Kap 3+4:** Hjalti (52 sider)
+
+**Kap 6 + 15:**  Thomas 17 sider + 30 
+
+**Kap 8-9:**  Kristoffer 55 sider
+
+**Kap 22-23: **Vemund 60 sider
+
+**Kap 25:** Erlend 24 sider
+
 Les denne ila juleferien: 
 
 ![image-20191216181718330](/home/kristoffer/.config/Typora/typora-user-images/image-20191216181718330.png)
