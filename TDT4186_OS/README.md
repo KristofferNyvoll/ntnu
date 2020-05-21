@@ -25,6 +25,8 @@ Læreboken i emnet:
 
 - William Stallings: Operating Systems - Internals and Design Principles; 9th Global Edition - Pearson
 
+
+
 Tentativt pensum: Kapitlene 1-12 & 15 + Appendiks A. 
 
 
@@ -355,14 +357,6 @@ Teller MÅ settes til 1 ved initsialisering.
 
 [Kapittel 11-12]
 
-### Sikkerhet 1
-
-[Kapittel 15]
-
-### Sikkerhet 2, Avslutning & Oppsummering
-
-[Kapittel 15, Alt]
-
 ### Eksamen! [22.05.2020]
 
 
@@ -438,8 +432,6 @@ I et multithreaded system kan flere samtidige threads være definert i en og sam
 
 Utgår. Søndag 26.01 & Mandag 27.01: 66 sider
 
-
-
 #### Kap 6 - Concurrency: Deadlock and Starvation: 289-339
 
 Utgår. Tirsdag 28.01: 50 sider
@@ -448,7 +440,17 @@ Utgår. Tirsdag 28.01: 50 sider
 
 #### Kap 7 - Memory Management: 339-370
 
-Torsdag 14.05: 31 sider
+Torsdag 14.05: 31 sider [Tok 1 time]
+
+Vi har to typer minne: main memory (raskt, dyrt og volatilt) og sekundærminne (treigt). Ønsker å ha så mye relevant info i main memory som mulig, men hvordan skal det deles opp, hvor skal det plasseres og hvordan bestemmer vi hvilke gamle (ubrukte) data som skal byttes ut? Dette løses vha minnehåndtering. 
+
+Det er ønskelig å utnytte så mye som mulig av main memory. Vi har to typer problemstillinger: Det kan oppstå små mellomrom mellom dataen vi setter inn fordi prosessen ikke passer (Internal fragmentation), eller massevis av pittesmå tomrom (external fragmentation) som må fikses vha compaction. Compaction er tidkrevende og unødvendig. To mulige løsninger på problemene er Paging og segmentation. 
+
+Paging deler opp alle prosesser i pages og laster det opp i frames, som er oppdelt i en gitt (liten) størrelse. 
+
+Segmentation er ganske lik, bortsett fra at størrelsen på frames'ene er dynamisk. 
+
+Hvor skal vi sette inn dataen? First-fit, next-fit og best-fit (dårligst. ja ironisk hahah). 
 
 
 
@@ -456,11 +458,46 @@ Torsdag 14.05: 31 sider
 
 Torsdag 14.05: 55 sider
 
+Vi ønsker å ha så mange aktive prosesser i main meomry som mulig, men kapasiteten er redusert. I tillegg ønsker programmerere å jobbe fritt fra restriksjoner fra minnestørrelse. 
+
+Virtuelt minne løser begge disse problemene ved å tillate følgende: 
+
+- Alle adressereferanser er logiske og oversettes til reelle adresser ved run time
+- Prosesser kan eksistere hvor enn de vil i main memory, og de kan endre posisjon over tid.
+- Prosesser kan brytes opp i mindre deler
+- Disse delene trenger ikke å befinne seg sammenhengende i minnet, kan deles opp og lagres forskjellige steder
+
+Virtuelt minne er avhengig av både software og hardware (prosessor) støtte. Brukes i nesten alle systemer. 
+
 
 
 #### Kap 9 - Uniprocessor Scheduling: 425-460
 
 Fredag 15.05: 35 sider
+
+Ønsker å tildele prosesser til prosessoren slik at vi maksimerer throughput og minimerer latency. 
+
+Typer scheduling: 
+
+- Long term (Sjelden og uregelmessig. Ganske grov.)
+- Medium term (Del av swapping-funksjonen) Basert på behovet for å håndtere multiprosessering. 
+- Short term (frequent & fine-grained) Kalles ved hver hendelse som kan blokkere den nåværende prosessen. Eksempler
+  - Interrupts (Clock eller I/O)
+  - Systemkall
+  - Signaler (Semaforer)
+
+Ulike algoritmer:
+
+- First come first served (FCFS) - Best på store prosesser, der det er liten forskjell mellom hver av dem
+- Round Robin. Veldig rettferdig mot små prosesser, null startvation. Mer overhead. Bruker clock. Favoriserer Porcessor-bound overfor I/O-bound, som får mindre prosessortid
+- Shortest process next: Prioriterer de med kortest estimert fullføringstid. Vanskelig å vite sikkert
+- Shortest remaining time: Ikke samme bias for store prosesser slik som FCFS, og heller ikke så mye overhead som RoundRobin (pga færre interrupts). Service times må registreres da, så det er noe overhead. Bedre throughput enn SPN. 
+- Highest response ratio next: Vi vil ha de prosessene med lavest service time og høyest "time spent waiting for the processor". 
+- Feedback. Har en annen måte å ikke favorisere lange prosesser på enn SPN, SRT og HRRN. En klokke pusher en prosess lengre ned i rekken for hver klokkesykel. Små prosesser kommer ikke så langt ned før de er ferdig, men lange ender opp nederst. Der kan den ikke gå lenger ned, men blir tatt av prosessoren på en slags round robin måte. 
+
+
+
+Man må foreta en avveining på hva som er viktigst: systemutnyttelse eller brukeropplevelse. Brukeren opplever gjerne systemet i form av prdictability, responsiveness og hurtighet, som medfører å kanskje bytte prosesser ofte for at det som bruker venter på skal bli ferdig. Dette medfører også mer overhead, som reduserer throughput, en viktig del av systemutnyttelsen. 
 
 
 
@@ -488,25 +525,30 @@ Sider: 599 - 29 = 570 sider i pensum.
 
 Per 12.05 gjenstår (570 - 200) = 370 sider. Dropper Concurrency, da gjenstår bare Kap 7 - 12 (260 sider). 
 
-13.05 
+13.05
 
-- 12:00 - 13:30 Spørretime Zoom
-- 14:00 - 17:00 Notere Wikipendium Memory + File systems
-- 19:00 - 21:15 Notere I/O og Multicore Wikipendium (resten)
-- 22:00 - 23:00 Skumme over Kap 1 - 4 
+- ~~12:00 - 13:30 Spørretime Zoom~~
+- ~~14:00 - 17:00 Notere Wikipendium Memory + File systems~~
+- ~~19:00 - 21:15 Notere I/O og Multicore Wikipendium (resten)~~
+- ~~22:00 - 23:30 Se YT-videoer~~
 
 14.05
 
-- 10:00 - 13:00 Lese Kap 7
-- 15:00 - 22:00 Lese Kap 8 og se YT vids
+- ~~10:00 - 11:00 Lese Kap 7~~
+
+- ~~13:30 - 16:00 Lese Kap 8~~
 
 15.05
 
-- 09:00 - 14:00 Lese pensum
+- ~~12:00 - 12:40 Lese pensum Kap 9~~
 
 16.05
 
 - Se over alle treningsoppgaver
+
+17.05
+
+- ~~lese kap 10~~
 
 Total tid til å lese pensum: 5 + 7 + 5 = 17 timer. Det er sikkert tilstrekkelig til å lese 260 sider. 
 
