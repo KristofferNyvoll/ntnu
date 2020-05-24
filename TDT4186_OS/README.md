@@ -27,7 +27,7 @@ Læreboken i emnet:
 
 
 
-Tentativt pensum: Kapitlene 1-12 & 15 + Appendiks A. 
+Tentativt pensum: Kapitlene 1-12 & Appendiks A. 
 
 
 
