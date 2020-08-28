@@ -1,0 +1,10 @@
+svg {
+  fill: lime;
+  stroke: lightgrey;
+  stroke-width: 4;
+  fill-rule: evenodd;
+}
+
+polygon:hover {
+  fill: red;
+}

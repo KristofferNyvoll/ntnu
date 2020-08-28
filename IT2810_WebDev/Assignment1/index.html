@@ -4,7 +4,6 @@
   <head>
     <title>My Abstract Art</title>
     <meta charset="utf-8" />
-
     <link rel="stylesheet" type="text/css" href="./style.css" />
   </head>
 
@@ -23,14 +22,21 @@
     </section>
     <section id="art">
       <div id="canvas">
-        <canvas id="myCanvas" width="500" height="500"> </canvas>
+        <h2>Canvas Star</h2>
+        <canvas id="myCanvas" width="300" height="300"> </canvas>
       </div>
 
       <div id="svg">
-        <svg id="mySVG"></svg>
+        <h2>SVG Star</h2>
+        <svg id="svg" height="300" width="300">
+          <polygon points="100,10 40,198 190,78 10,78 160,198" />
+        </svg>
       </div>
     </section>
+
+    <button>Show/Hide information</button>
+    <div id="contentDiv">Some text about stuff</div>
   </body>
-  <script src="index.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="index.js"></script>
 </html>
