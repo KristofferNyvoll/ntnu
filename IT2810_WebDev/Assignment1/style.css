@@ -1,5 +1,36 @@
+body {
+  font-family: "Open Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Helvetica Neue", sans-serif;
+  height: 100%;
+}
+
+#intro {
+  margin: auto;
+  max-width: 1300px;
+}
+
+h1 {
+  align-self: center;
+  margin: auto;
+  font-size: 4em;
+}
+
+.wrapper {
+  width: 500px;
+  display: flex;
+  margin: auto;
+  padding-inline: 100px;
+}
+.wrapper > div {
+  flex: 1;
+}
+
+.wrapper > svg {
+  margin-left: auto;
+}
+
 svg {
-  fill: lime;
+  fill: grey;
   stroke: lightgrey;
   stroke-width: 4;
   fill-rule: evenodd;
@@ -7,4 +38,25 @@ svg {
 
 polygon:hover {
   fill: red;
+}
+
+#infoDiv {
+  bottom: 1rem;
+  max-width: 1300px;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+blockquote p {
+  padding: 15px;
+  background: #eee;
+  border-radius: 5px;
+}
+
+blockquote p::before {
+  content: "\201C";
+}
+
+blockquote p::after {
+  content: "\201D";
 }

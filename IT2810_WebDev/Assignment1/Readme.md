@@ -61,9 +61,3 @@ Dokumentasjonen skal diskutere og forklare dine valg og løsninger (500-1000 ord
 - Gi en kort beskrivelse av hvordan du har utført cross-browser testing.
 - List opp de viktigste (mest nyttige) informasjonskildene du har brukt (tutorials, websider, bøker).
 - Husk å oppgi kilder hvis du gjenbruker kodesnutter.
-
-https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
-
-https://css-tricks.com/change-color-of-svg-on-hover/
-
-http://www.java2s.com/Tutorials/Javascript/Canvas_How_to/Drawing_Settings/Hover_to_change_fill_style.htm

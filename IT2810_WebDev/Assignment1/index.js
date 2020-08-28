@@ -16,14 +16,14 @@ $(document).ready(function () {
       ctx.stroke();
     }
   }
-  draw("lime");
+  draw("grey");
 
   $("#myCanvas").hover(
     () => {
       draw("red");
     },
     () => {
-      draw("lime");
+      draw("grey");
     }
   );
 
