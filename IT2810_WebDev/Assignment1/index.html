@@ -12,14 +12,14 @@
       <h1>My Abstract Art</h1>
       <blockquote>
         <p>
-          A piece of art can be a simple splat of paint dispersed seemingly
+          "A piece of art can be a simple splat of paint dispersed seemingly
           randomly on a sheet of canvas and still be worth billions. The
           brilliant thing about art is its inherent subjective worth. I
           specialize in simple star-shapes. Not unlike other artists, my works
-          are of questionable quality. This is the essence of art.
+          are of questionable intrinsic quality. This is the undeniable essence of art."
         </p>
         <footer>
-          -Artist, <cite>Just b'cause the oppgavebeskrivelse said so</cite>
+           - Minimalist Artist, <cite>Gently adhering to the oppgavebeskrivelse</cite>
         </footer>
       </blockquote>
     </div>
@@ -33,30 +33,35 @@
         <h2>SVG Star</h2>
         <svg id="svg" height="300" width="300">
           <polygon points="100,10 40,198 190,78 10,78 160,198" />
+          <circle cx="45" cy="45" r="10"/>
+          <circle cx="155" cy="45" r="10"/>
+          <circle cx="30" cy="140" r="10"/>
+          <circle cx="170" cy="140" r="10"/>
+          <circle cx="100" cy="190" r="10"/>
         </svg>
       </div>
     </div>
 
     <div id="infoDiv">
-      <button>Show/Hide information</button>
+      <button>Show/Hide documentation</button>
       <div id="contentDiv">
         <p>
-          Flexbox has been used as there are only two div's in need of styling
+          <b>Flexbox</b> has been used as there are only two div's in need of styling
           with position and layout (those containing the SVG and Canvas
           Elements). CSS Grid would have been more appropriate with several
           other div's - with need of styling with both rows and columns -
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout"
             >source</a
-          >.
+          >. In short, flexbox was regarded as the preferred (most effective) way to style this webpage. 
         </p>
 
         <p>
-          <b>Canvas</b> is defined in an external js-file. jQuery is used to
-          invoke actions on the Canvas, such as hover. <br />
+          <b>Canvas</b> is drawn in an external js-file. jQuery is used to
+          invoke actions on the Canvas, such as hover. jQuery also toggles this text.<br />
           <b>SVG</b> is defined inline in the HTML due to the simplicity of the
           element. The interactive part is ensured by a simple css-command. This
-          has the advantage of targeting the polygon itself, instead of the
+          has the advantage of targeting the polygon and circles themselves, instead of the
           entire element. <b>jQuery</b> is imported in the script tag below, and
           used in index.js to simplify all the actions (.ready and .hover) on
           the elements in the html-file.
@@ -80,7 +85,7 @@
             href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
         "
             >MDN documentation</a
-          >.
+          >. The rest is simple enough to be remembered from IT2805 (or from w3, etc..). 
         </p>
       </div>
     </div>

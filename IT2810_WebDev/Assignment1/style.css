@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+  font-family: "Open Sans", "Segoe UI", Ubuntu, Cantarell,
     "Helvetica Neue", sans-serif;
   height: 100%;
 }
@@ -19,14 +19,6 @@ h1 {
   width: 500px;
   display: flex;
   margin: auto;
-  padding-inline: 100px;
-}
-.wrapper > div {
-  flex: 1;
-}
-
-.wrapper > svg {
-  margin-left: auto;
 }
 
 svg {
@@ -40,23 +32,23 @@ polygon:hover {
   fill: red;
 }
 
+circle {
+  stroke:gray;
+  stroke-width:3 ;
+  fill:white; 
+}
+
+circle:hover {
+  fill:black;
+}
+
 #infoDiv {
-  bottom: 1rem;
   max-width: 1300px;
   margin: auto;
-  margin-bottom: 1rem;
 }
 
 blockquote p {
   padding: 15px;
   background: #eee;
   border-radius: 5px;
-}
-
-blockquote p::before {
-  content: "\201C";
-}
-
-blockquote p::after {
-  content: "\201D";
 }
