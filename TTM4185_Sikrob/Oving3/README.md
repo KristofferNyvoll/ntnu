@@ -1,5 +1,5 @@
-# TTM4185
-Git clone. Deretter: 
+# Øving 3
+Antar Linux. Python versjon >= 3.5. Git clone. Deretter: 
 
 ```
 $ cd Oving3
