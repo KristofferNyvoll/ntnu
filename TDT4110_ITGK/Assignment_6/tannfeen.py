@@ -10,12 +10,12 @@ def tannFeen(teeth):
         while True:
             # Sjekker om verdien er null
             if i != 0:
-                # Sjekker om myntene går opp i verdien. Trekker fra verdien
+                # Sjekker om myntene gaar opp i verdien. Trekker fra verdien
                 if i - coins[myntPlass] >= 0:
                     teller += 1
                     i -= coins[myntPlass]
 
-                # hvis resten er oddetall and coinincrement == 3, så legg inn verdi og break ut av while-løkke
+                # hvis resten er oddetall and coinincrement == 3, saa legg inn verdi og break ut av while-loop
                 elif (i - coins[myntPlass] < 0) and (myntPlass == 3):
                     toothValues.append(teller)
                     break
@@ -24,7 +24,7 @@ def tannFeen(teeth):
                     value.append(teller)
                     teller = 0
                     myntPlass += 1
-            # Breaker ut av while-løkken
+            # Breaker ut av while-loopen
             else:
                 value.append(teller)
                 toothValues.append(value)
